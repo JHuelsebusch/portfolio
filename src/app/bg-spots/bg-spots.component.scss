@@ -1,0 +1,17 @@
+div {
+    overflow: hidden;
+    width: 100%;
+    z-index: 1;
+    .blueShadow-1 {
+        position: absolute;
+        height: 400px;
+        top: 250px;
+        left: -200px;
+    }
+    .greenShadow-1 {
+        position: absolute;
+        height: 300px;
+        top: 450px;
+        right: -180px;
+    }
+}

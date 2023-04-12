@@ -1,0 +1,33 @@
+.startSec {
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+    padding-top: 70px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    z-index: 5;
+    div {
+        display: flex;
+        flex-direction: row;
+    }
+    .devSide {
+        transform: rotate(270deg);
+        margin-right: -30px;
+        font-size: 36px;
+    }
+    .dev {
+        flex-direction: column;
+        .name {
+            font-family: Roboto-Black, sans-serif;
+            font-size: 40px;
+        }
+        .profession {
+            font-size: 30px;
+            color: #4b47ff;
+            text-transform: uppercase;
+        }
+    }
+}

@@ -9,10 +9,13 @@ header {
     left: 0;
     z-index: 10;
     img {
-        padding: 16px;
+        padding: 25px;
         height: 30px;
     }
     .logo {
         height: 40px;
+    }
+    .menu {
+        cursor: pointer
     }
 }

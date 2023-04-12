@@ -1,3 +1,4 @@
+$mobile-breakpoint: 520px;
 header {
     background-color: #141d2f;
     display: flex;
@@ -8,14 +9,54 @@ header {
     right: 0;
     left: 0;
     z-index: 10;
+    padding: 25px;
     img {
-        padding: 25px;
         height: 30px;
     }
     .logo {
         height: 40px;
     }
     .menu {
+        display: none;
         cursor: pointer
+    }
+    .links {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        a {
+            text-decoration: none;
+            color: var(--white);
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                width: 40px;
+                transform: scaleX(0);
+                height: 2px;
+                bottom: -2px;
+                left: 0;
+                background-color: var(--blue);
+                transform-origin: bottom left;
+                transition: transform 125ms ease-out;
+            }
+            &:hover::after {
+                transform: scaleX(1);
+                transform-origin: bottom left;
+            }
+            &:hover {
+                color: var(--lightblue);
+                transition: 125ms ease-out;
+            }
+        }
+    }
+}
+
+@media (max-width:$mobile-breakpoint) {
+    .menu {
+        display: flex !important;
+    }
+    .links {
+        display: none !important;
     }
 }

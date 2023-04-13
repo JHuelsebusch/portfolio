@@ -19,14 +19,22 @@ $mobile-breakpoint: 520px;
     --font: Roboto, sans-serif;
     --font-bold: Roboto-Bold, sans-serif;
     --font-black: Roboto-Black, sans-serif;
+    --headline-size: 50px;
+    --font-size: 16px;
 }
 
 body {
     margin: 0;
     background-color: var(--darkblue);
     font-family: var(--font);
-    font-size: 16px;
+    font-size: var(--font-size);
     color: var(--white);
+}
+
+h2 {
+    font-size: var(--headline-size);
+    margin-block-start: 0em;
+    margin-block-end: 0em;
 }
 
 .btn {

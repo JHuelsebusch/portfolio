@@ -10,7 +10,8 @@ header {
     right: 0;
     left: 0;
     z-index: 10;
-    padding: 25px;
+    padding: var(--padding-page);
+    height: 70px;
     img {
         height: 30px;
     }

@@ -1,0 +1,46 @@
+.skillSec {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 5;
+    .skills {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        padding: var(--padding-page);
+        .line {
+            position: absolute;
+            right: 0;
+        }
+    }
+    p {
+        padding: var(--padding-page);
+        z-index: 5;
+    }
+    .skillList {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: var(--padding-page);
+        gap: 20px;
+        z-index: 5;
+        .skillIcons {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            img {
+                height: 50px;
+                object-fit: contain;
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+    .skillbtn {
+        align-self: center;
+        margin: 20px 0px;
+    }
+}

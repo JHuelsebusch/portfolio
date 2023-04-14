@@ -1,13 +1,51 @@
 .contactSec {
+    padding: var(--padding-page);
     .head {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
-        padding: var(--padding-page);
         .line {
             position: absolute;
             right: 0;
+        }
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+        input,
+        textarea {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            color: var(--white);
+            padding: 15px 25px;
+            gap: 10px;
+            background: unset;
+            border: 1px solid var(--blue);
+            border-radius: 10px;
+            &::placeholder {
+                font-family: var(--font);
+                font-size: var(--font-size);
+                color: var(--white);
+            }
+            &:focus {
+                border: 1px solid var(--lightblue);
+            }
+            &.ng-touched,
+            &.ng-dirty {
+                &.ng-invalid {
+                    border: 1px solid red;
+                }
+                &.ng-valid {
+                    border: 1px solid var(--lightblue);
+                }
+            }
+        }
+        .error {
+            color: red;
         }
     }
 }

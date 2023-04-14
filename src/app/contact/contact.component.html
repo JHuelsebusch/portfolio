@@ -3,4 +3,32 @@
         <h2>Contact</h2>
         <img src="./../../assets/img/line/lightblueRight.png" class="line">
     </div>
+    <p><b>Got a problem to solve?</b></p>
+    <p>Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your projects with my work. <br>
+        <br> Need a frontend developer? <b>Contact me!</b></p>
+    <form [formGroup]="contactForm">
+        <input formControlName="name" type="text" placeholder="Your name" id="name">
+        <ng-container *ngIf="contactForm.controls['name'] as name">
+            <ng-container *ngIf="name.dirty || name.touched ">
+                <p class="error" *ngIf="name.errors?.['required']">Your name is required</p>
+            </ng-container>
+        </ng-container>
+
+        <input formControlName="email" type="text" placeholder="Your email" id="email">
+        <ng-container *ngIf="contactForm.controls['email'] as email">
+            <ng-container *ngIf="email.dirty || email.touched ">
+                <p class="error" *ngIf="email.errors?.['required']">Your email is required</p>
+            </ng-container>
+        </ng-container>
+
+        <textarea formControlName="message" name="" id="" cols="30" rows="10" placeholder="Your message" id="message"></textarea>
+        <ng-container *ngIf="contactForm.controls['message'] as message">
+            <ng-container *ngIf="message.dirty || message.touched ">
+                <p class="error" *ngIf="message.errors?.['required']">Your message is empty</p>
+            </ng-container>
+        </ng-container>
+
+        <button class="btn" type="submit">Send message</button>
+
+    </form>
 </div>

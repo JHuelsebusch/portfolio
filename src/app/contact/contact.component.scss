@@ -1,0 +1,13 @@
+.contactSec {
+    .head {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        padding: var(--padding-page);
+        .line {
+            position: absolute;
+            right: 0;
+        }
+    }
+}

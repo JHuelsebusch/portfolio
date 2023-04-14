@@ -1,0 +1,52 @@
+.portfolioSec {
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    gap: 30px;
+    .head {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        padding: var(--padding-page);
+        .line {
+            position: absolute;
+            left: 0;
+        }
+    }
+    p {
+        padding: var(--padding-page);
+    }
+    .project {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: var(--padding-page);
+        gap: 20px;
+        img {
+            width: 80%;
+            max-width: 550px;
+        }
+        div {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            gap: 20px;
+            .projectName {
+                color: var(--blue);
+                font-family: var(--font-black);
+                font-size: var(--subheadline-size);
+            }
+            .projectTec {
+                color: var(--lightblue);
+                font-size: var(--subheadline-size2);
+            }
+            .projectlinks {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 20px;
+            }
+        }
+    }
+}

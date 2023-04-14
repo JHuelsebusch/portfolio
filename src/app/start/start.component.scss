@@ -38,7 +38,7 @@ $mobile-breakpoint: 520px;
             font-size: var(--headline-size);
         }
         .profession {
-            font-size: 32px;
+            font-size: var(--subheadline-size);
             color: var(--blue);
             text-transform: uppercase;
         }

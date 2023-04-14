@@ -23,10 +23,17 @@ div {
         top: 850px;
         right: -100px;
     }
+    .blueShadow-2 {
+        position: absolute;
+        height: 500px;
+        top: 1400px;
+        right: -350px;
+        transform: rotate(-10deg);
+    }
     .greenShadow-2 {
         position: absolute;
         height: 500px;
-        top: 1600px;
+        top: 1800px;
         left: -300px;
         transform: rotate(60deg);
     }

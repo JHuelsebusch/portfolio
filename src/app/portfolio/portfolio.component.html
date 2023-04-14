@@ -1,1 +1,26 @@
-<p>portfolio works!</p>
+<div class="portfolioSec">
+    <div class="head">
+        <img src="./../../assets/img/line/greenSmallLeft.png" class="line">
+        <h2>Portfolio</h2>
+    </div>
+    <p>This page is a sample of my work - please feel free to try them out.</p>
+    <div class="project" *ngFor="let project of projects; let i = index">
+        <img src="./../../assets/img/projects/{{project.img}}">
+        <div>
+            <div class="projectName">{{project.name}}</div>
+            <div class="projectTec">{{project.technologies}}</div>
+            <div class="projectDescription">{{project.description}}</div>
+            <div class="projectlinks">
+                <button class="btnEmpty">
+                    {{project.link}}
+                    Live test 
+                </button>
+                <button class="btnEmpty">
+                    {{project.github}}
+                    Github
+                </button>
+            </div>
+        </div>
+
+    </div>
+</div>

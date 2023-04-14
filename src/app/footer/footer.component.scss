@@ -17,6 +17,10 @@ footer {
         }
         .goUp {
             justify-self: flex-end;
+            cursor: pointer;
+            &:hover {
+                filter: brightness(0) saturate(100%) invert(55%) sepia(80%) saturate(3632%) hue-rotate(157deg) brightness(107%) contrast(101%);
+            }
         }
     }
     .foot {

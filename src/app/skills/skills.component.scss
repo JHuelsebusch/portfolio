@@ -1,31 +1,65 @@
+$mobile-breakpoint: 520px;
+$mobile-breakpoint-2: 800px;
+$mobile-breakpoint-3: 1100px;
+$mobile-breakpoint-4: 1400px;
 .skillSec {
     position: relative;
     display: flex;
     flex-direction: column;
     gap: 20px;
     z-index: 7;
-    .skills {
+    .skillContent {
         display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        padding: var(--padding-page);
-        .line {
-            position: absolute;
-            right: 0;
+        flex-direction: column;
+        .skills {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            padding: var(--padding-page);
+            .line {
+                position: absolute;
+                right: 0;
+            }
+        }
+        p {
+            padding: var(--padding-page);
+            z-index: 5;
+        }
+        .skillListMobile {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: var(--padding-page);
+            gap: 20px;
+            z-index: 5;
+            .skillIcons {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                img {
+                    height: 50px;
+                    object-fit: contain;
+                    &:hover {
+                        transform: scale(1.2);
+                    }
+                }
+            }
+        }
+        .skillbtn {
+            align-self: center;
+            margin: 20px 0px;
+            z-index: 5;
         }
     }
-    p {
-        padding: var(--padding-page);
-        z-index: 5;
-    }
-    .skillList {
-        display: flex;
+    .skillListDesktop {
+        display: none;
         flex-direction: row;
         justify-content: center;
         flex-wrap: wrap;
         padding: var(--padding-page);
-        gap: 20px;
+        gap: 50px;
         z-index: 5;
         .skillIcons {
             display: flex;
@@ -40,9 +74,47 @@
             }
         }
     }
-    .skillbtn {
-        align-self: center;
-        margin: 20px 0px;
-        z-index: 5;
+}
+
+@media (min-width: $mobile-breakpoint-3) {
+    .skillSec {
+        flex-direction: row-reverse;
+        justify-content: space-between !important;
+        align-items: center;
+        min-height: 50vh;
+        gap: 50px;
+        .skillContent {
+            padding: var(--padding-page);
+            padding-left: unset !important;
+            width: 30%;
+            // min-width: 460px;
+            .skills {
+                padding: unset;
+            }
+            p {
+                padding: unset;
+            }
+            .skillbtn {
+                align-self: flex-start;
+            }
+        }
+        .skillListMobile {
+            display: none !important;
+        }
+        .skillListDesktop {
+            display: flex !important;
+            padding-right: unset !important;
+            max-width: 540px;
+        }
+    }
+}
+
+@media (min-width: $mobile-breakpoint-4) {
+    .skillListDesktop {
+        padding: 90px !important;
+        display: flex !important;
+        padding-right: unset !important;
+        max-width: 585px !important;
+        gap: 90px !important;
     }
 }

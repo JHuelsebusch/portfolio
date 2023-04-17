@@ -1,8 +1,25 @@
+$mobile-breakpoint: 520px;
+$mobile-breakpoint-2: 800px;
+$mobile-breakpoint-3: 1100px;
+$mobile-breakpoint-4: 1400px;
 .portfolioSec {
     display: flex;
     flex-direction: column;
-    // align-items: center;
     gap: 30px;
+    position: relative;
+    overflow-x: clip;
+    .spotLightblue {
+        position: absolute;
+        z-index: -1;
+        right: -400px;
+        top: -200px;
+    }
+    .spotGreen {
+        position: absolute;
+        z-index: -1;
+        left: -650px;
+        top: 500px;
+    }
     .head {
         display: flex;
         flex-direction: row;
@@ -48,5 +65,55 @@
                 gap: 20px;
             }
         }
+    }
+}
+
+@media (min-width: $mobile-breakpoint-2) {
+    .spotLightblue {
+        right: -350px !important;
+        top: -150px !important;
+    }
+    .spotGreen {
+        left: -600px !important;
+        top: 500px !important;
+    }
+}
+
+@media (min-width: $mobile-breakpoint-3) {
+    .project {
+        flex-direction: row !important;
+        padding-top: 30px !important;
+        padding-bottom: 30px !important;
+        gap: 50px !important;
+        div {
+            text-align: start !important;
+            .projectlinks {
+                justify-content: flex-start !important;
+            }
+        }
+    }
+    .project:nth-child(even) {
+        flex-direction: row-reverse !important;
+        div {
+            text-align: end !important;
+            .projectlinks {
+                justify-content: flex-end !important;
+            }
+        }
+    }
+    .spotLightblue {
+        right: -290px !important;
+        top: -100px !important;
+    }
+}
+
+@media (min-width: $mobile-breakpoint-4) {
+    .spotLightblue {
+        right: -220px !important;
+        top: -100px !important;
+    }
+    .spotGreen {
+        left: -500px !important;
+        top: 500px !important;
     }
 }

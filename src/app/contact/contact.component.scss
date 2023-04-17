@@ -1,5 +1,11 @@
+$mobile-breakpoint: 520px;
+$mobile-breakpoint-2: 800px;
+$mobile-breakpoint-3: 1100px;
+$mobile-breakpoint-4: 1400px;
 .contactSec {
     padding: var(--padding-page);
+    display: flex;
+    flex-direction: column;
     .head {
         display: flex;
         flex-direction: row;
@@ -15,6 +21,7 @@
         flex-direction: column;
         align-items: center;
         width: 100%;
+        margin-top: 30px;
         gap: 30px;
         div {
             position: relative;
@@ -56,6 +63,26 @@
                 font-size: 12px;
                 margin: 0;
             }
+        }
+    }
+}
+
+@media (min-width: $mobile-breakpoint) {
+    .contactSec {
+        form {
+            align-self: center;
+            max-width: 520px;
+        }
+    }
+}
+
+@media (min-width: $mobile-breakpoint-3) {
+    .contactSec {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        form {
+            margin-top: 200px !important;
         }
     }
 }

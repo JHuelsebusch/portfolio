@@ -12,13 +12,22 @@ $mobile-breakpoint-4: 1400px;
         display: flex;
         justify-content: center;
         padding: var(--padding-page);
-        .shape {
+        position: relative;
+        .wave {
             z-index: 6;
             position: absolute;
             width: 100%;
             right: 0;
             left: 0;
-            top: 310px;
+            bottom: -50px;
+            height: 100px;
+        }
+        .spot {
+            z-index: -1;
+            position: absolute;
+            width: 100%;
+            max-width: 500px;
+            bottom: 0px;
         }
         .pic {
             object-fit: contain;
@@ -54,27 +63,21 @@ $mobile-breakpoint-4: 1400px;
     }
 }
 
-@media (min-width: $mobile-breakpoint) {
-    .shape {
-        top: 280px !important;
-    }
-}
-
-@media (min-width: $mobile-breakpoint-2) {
-    .shape {
-        top: 250px !important;
-    }
-}
-
 @media (min-width: $mobile-breakpoint-3) {
     .aboutMeSec {
         flex-direction: row-reverse;
         justify-content: space-between;
+        margin-bottom: 50px;
         .profile {
             align-items: flex-end;
             padding-left: unset;
+            position: unset;
             .pic {
                 width: 380px;
+            }
+            .wave {
+                bottom: -215px;
+                height: 300px;
             }
         }
         .content {
@@ -82,64 +85,13 @@ $mobile-breakpoint-4: 1400px;
             width: 40%;
             min-width: 460px;
         }
-        .shape {
-            top: unset !important;
-            bottom: -540px;
-        }
-    }
-}
-
-@media (min-width: 1200px) {
-    .shape {
-        bottom: -600px !important;
-    }
-}
-
-@media (min-width: 1300px) {
-    .shape {
-        bottom: -655px !important;
     }
 }
 
 @media (min-width: $mobile-breakpoint-4) {
     .aboutMeSec {
-        margin-bottom: 50px;
         .pic {
             width: 440px !important;
         }
-        .shape {
-            top: unset !important;
-            bottom: -700px !important;
-        }
-    }
-}
-
-@media (min-width: 1500px) {
-    .shape {
-        bottom: -760px !important;
-    }
-}
-
-@media (min-width: 1600px) {
-    .shape {
-        bottom: -815px !important;
-    }
-}
-
-@media (min-width: 1700px) {
-    .shape {
-        bottom: -870px !important;
-    }
-}
-
-@media (min-width: 1800px) {
-    .shape {
-        bottom: -925px !important;
-    }
-}
-
-@media (min-width: 1900px) {
-    .shape {
-        bottom: -990px !important;
     }
 }

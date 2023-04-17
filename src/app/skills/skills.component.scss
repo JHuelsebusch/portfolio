@@ -1,8 +1,9 @@
 .skillSec {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    z-index: 5;
+    z-index: 7;
     .skills {
         display: flex;
         flex-direction: row;

@@ -10,6 +10,9 @@
 }
 
 $mobile-breakpoint: 520px;
+$mobile-breakpoint-2: 800px;
+$mobile-breakpoint-3: 1100px;
+$mobile-breakpoint-4: 1400px;
 :root {
     --darkblue: #141d2f;
     --blue: #4b47ff;
@@ -24,6 +27,26 @@ $mobile-breakpoint: 520px;
     --subheadline-size2: 24px;
     --font-size: 16px;
     --padding-page: 0px 25px;
+}
+
+@media (min-width: $mobile-breakpoint-3) {
+     :root {
+        --headline-size: 70px;
+        --subheadline-size: 50px;
+        --subheadline-size2: 32px;
+        --font-size: 18px;
+        --padding-page: 0px 100px;
+    }
+}
+
+@media (min-width: $mobile-breakpoint-4) {
+     :root {
+        --headline-size: 90px;
+        --subheadline-size: 68px;
+        --subheadline-size2: 32px;
+        --font-size: 20px;
+        --padding-page: 0px 100px;
+    }
 }
 
 body {

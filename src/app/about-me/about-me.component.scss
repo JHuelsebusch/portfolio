@@ -1,39 +1,145 @@
+$mobile-breakpoint: 520px;
+$mobile-breakpoint-2: 800px;
+$mobile-breakpoint-3: 1100px;
+$mobile-breakpoint-4: 1400px;
 .aboutMeSec {
     display: flex;
     flex-direction: column;
+    position: relative;
     .profile {
-        position: relative;
-        // overflow: hidden;
+        padding: unset;
         z-index: 5;
         display: flex;
         justify-content: center;
-        .pic {
-            object-fit: contain;
-            width: 300px;
-        }
+        padding: var(--padding-page);
         .shape {
             z-index: 6;
             position: absolute;
             width: 100%;
             right: 0;
             left: 0;
-            bottom: -200px;
+            top: 310px;
+        }
+        .pic {
+            object-fit: contain;
+            width: 300px;
         }
     }
-    .aboutMe {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding: var(--padding-page);
+    .content {
         position: relative;
         z-index: 7;
-        .line {
-            position: absolute;
-            left: 0;
+        padding: var(--padding-page);
+        .aboutMe {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            .line {
+                position: absolute;
+                left: 0px;
+            }
+        }
+        .aboutMeContent {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 20px;
+            .icon {
+                img {
+                    object-fit: contain;
+                    width: 60px;
+                    height: 50px;
+                }
+            }
         }
     }
-    p {
-        z-index: 7;
-        padding: var(--padding-page);
+}
+
+@media (min-width: $mobile-breakpoint) {
+    .shape {
+        top: 280px !important;
+    }
+}
+
+@media (min-width: $mobile-breakpoint-2) {
+    .shape {
+        top: 250px !important;
+    }
+}
+
+@media (min-width: $mobile-breakpoint-3) {
+    .aboutMeSec {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        .profile {
+            align-items: flex-end;
+            padding-left: unset;
+            .pic {
+                width: 380px;
+            }
+        }
+        .content {
+            padding-right: unset;
+            width: 40%;
+            min-width: 460px;
+        }
+        .shape {
+            top: unset !important;
+            bottom: -540px;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .shape {
+        bottom: -600px !important;
+    }
+}
+
+@media (min-width: 1300px) {
+    .shape {
+        bottom: -655px !important;
+    }
+}
+
+@media (min-width: $mobile-breakpoint-4) {
+    .aboutMeSec {
+        margin-bottom: 50px;
+        .pic {
+            width: 440px !important;
+        }
+        .shape {
+            top: unset !important;
+            bottom: -700px !important;
+        }
+    }
+}
+
+@media (min-width: 1500px) {
+    .shape {
+        bottom: -760px !important;
+    }
+}
+
+@media (min-width: 1600px) {
+    .shape {
+        bottom: -815px !important;
+    }
+}
+
+@media (min-width: 1700px) {
+    .shape {
+        bottom: -870px !important;
+    }
+}
+
+@media (min-width: 1800px) {
+    .shape {
+        bottom: -925px !important;
+    }
+}
+
+@media (min-width: 1900px) {
+    .shape {
+        bottom: -990px !important;
     }
 }

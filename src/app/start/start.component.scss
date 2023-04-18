@@ -16,6 +16,7 @@ $mobile-breakpoint-4: 1400px;
     box-sizing: border-box;
     gap: 50px;
     z-index: 5;
+    overflow: hidden;
     .row {
         max-width: 100%;
         display: flex;

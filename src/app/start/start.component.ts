@@ -6,4 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./start.component.scss']
 })
 export class StartComponent {
+  emailstring = "mailto:mail@janis-huelsebusch.de"
 }

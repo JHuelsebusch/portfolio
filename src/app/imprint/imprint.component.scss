@@ -1,0 +1,23 @@
+$mobile-breakpoint: 520px;
+$mobile-breakpoint-2: 800px;
+$mobile-breakpoint-3: 1100px;
+$mobile-breakpoint-4: 1400px;
+.imprintSec {
+    min-height: calc(100vh - 314px);
+    padding: var(--padding-page);
+    padding-top: 70px;
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .subheadline {
+        font-size: var(--subheadline-size2);
+    }
+}
+
+@media (min-width: $mobile-breakpoint) {
+    .imprintSec {
+        display: block !important;
+    }
+}

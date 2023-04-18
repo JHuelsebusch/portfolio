@@ -13,8 +13,7 @@
             <div class="projectTec">{{project.technologies}}</div>
             <div class="projectDescription">{{project.description}}</div>
             <div class="projectlinks">
-                <button class="btnEmpty">
-                    {{project.link}}
+                <button class="btnEmpty" (click)="openNewWindow(project.link)">
                     Live test 
                 </button>
                 <button class="btnEmpty" (click)="openNewWindow(project.github)">

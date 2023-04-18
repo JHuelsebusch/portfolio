@@ -10,7 +10,7 @@ export class PortfolioComponent {
     name: 'Pokedex',
     technologies: 'JavaScript | Rest-Api | HTML | CSS',
     description: 'Based on the PokéAPI a simple libary that provides and catalogues pokémon information',
-    link: '',
+    link: 'https://janis-huelsebusch.de/projects/pokedex',
     github: 'https://github.com/JHuelsebusch/pokedex',
     img: 'pokedex.png'
 
@@ -18,14 +18,14 @@ export class PortfolioComponent {
     name: 'Join',
     technologies: 'JavaScript | HTML | CSS',
     description: 'Task manager inspired by the Kanban System. Create and organize task using drag and drop functions, assign users and categories. This project was developed by group work.',
-    link: '',
+    link: 'https://janis-huelsebusch.de/projects/join',
     github: 'https://github.com/JHuelsebusch/join',
     img: 'join.png'
   }, {
     name: 'Elves of Fate',
     technologies: 'JavaScript | HTML | SCSS',
     description: 'A simple Jump-and-Run game based on an object-oriented approach. Help the last remaining elf to find spellbooks and mana poisons to fight against the attacking orcs. ',
-    link: '',
+    link: 'https://janis-huelsebusch.de/projects/elves_of_fate',
     github: 'https://github.com/JHuelsebusch/elves_of_fate',
     img: 'elves.png'
   }

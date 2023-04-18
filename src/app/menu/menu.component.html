@@ -1,14 +1,15 @@
 <header>
-    <img class="logo" src="./../../assets/img/logo/logo_portfolio.png">
-
-    <img class="menu" src="./../../assets/img/icon/menu/burger.png">
-
-    <div class="links">
-        <a href="#aboutMe">About me</a>
-        <a href="#skills">Skills</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Contact</a>
-
+    <img routerLink="/#start" class="logo" src="./../../assets/img/logo/logo_portfolio.png">
+    <label class="burger" for="burger">
+        <input type="checkbox" id="burger" (click)="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+    <div class="links" [class.isOpen]="isMenuOpen">
+        <a href="#aboutMe" (click)="closeMenu()">About me</a>
+        <a href="#skills" (click)="closeMenu()">Skills</a>
+        <a href="#portfolio" (click)="closeMenu()">Portfolio</a>
+        <a href="#contact" (click)="closeMenu()">Contact</a>
     </div>
-
 </header>

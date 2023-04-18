@@ -1,4 +1,4 @@
-<div class="portfolioSec">
+<div class="portfolioSec" id="portfolio">
     <img src="./../../assets/img/bg/lightblueShadow_2.png" class="spotLightblue">
     <img src="./../../assets/img/bg/greenShadow_2.png" class="spotGreen">
     <div class="head">
@@ -7,8 +7,8 @@
     </div>
     <p>This page is a sample of my work - please feel free to try them out.</p>
     <div class="project" *ngFor="let project of projects; let i = index">
-        <img src="./../../assets/img/projects/{{project.img}}">
-        <div>
+        <img src="./../../assets/img/projects/{{project.img}}" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000">
+        <div data-aos="fade-down" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000">
             <div class="projectName">{{project.name}}</div>
             <div class="projectTec">{{project.technologies}}</div>
             <div class="projectDescription">{{project.description}}</div>
@@ -18,7 +18,8 @@
                     Live test 
                 </button>
                 <button class="btnEmpty">
-                    {{project.github}}
+                    <!-- (click)="window.location.href = '{{project.github}}'"> -->
+                    
                     Github
                 </button>
             </div>

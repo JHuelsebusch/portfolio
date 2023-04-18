@@ -1,5 +1,5 @@
-<div class="skillSec">
-    <div class="skillContent">
+<div class="skillSec" id="skills">
+    <div class="skillContent" data-aos="fade-left" data-aos-anchor-placement="center-bottom" data-aos-duration="1000">
 
         <div class="skills">
             <h2>Skills</h2>
@@ -20,7 +20,7 @@
         Get in touch
     </button>
     </div>
-    <div class="skillListDesktop">
+    <div class="skillListDesktop" data-aos="zoom-in" data-aos-anchor-placement="center-bottom" data-aos-duration="1000">
         <div class="skillIcons" *ngFor="let skill of skills; let i = index">
             <img src="./../../assets/img/icon/{{skillImg[i]}}" alt=""> {{skill}}
         </div>

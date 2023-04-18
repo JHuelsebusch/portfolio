@@ -49,6 +49,10 @@ $mobile-breakpoint-4: 1400px;
     }
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     background-color: var(--darkblue);

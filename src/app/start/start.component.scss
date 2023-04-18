@@ -30,20 +30,26 @@ $mobile-breakpoint-4: 1400px;
         margin-block-start: 0em;
         margin-block-end: 0em;
     }
-    .dev {
+    .start {
+        display: flex;
         flex-direction: column;
-        p {
-            margin-block-start: 0em;
-            margin-block-end: 0em;
-        }
-        .name {
-            font-family: var(--font-black);
-            font-size: var(--headline-size);
-        }
-        .profession {
-            font-size: var(--subheadline-size);
-            color: var(--blue);
-            text-transform: uppercase;
+        align-items: center;
+        gap: 50px;
+        .dev {
+            flex-direction: column;
+            p {
+                margin-block-start: 0em;
+                margin-block-end: 0em;
+            }
+            .name {
+                font-family: var(--font-black);
+                font-size: var(--headline-size);
+            }
+            .profession {
+                font-size: var(--subheadline-size);
+                color: var(--blue);
+                text-transform: uppercase;
+            }
         }
     }
     .startpageEnd {

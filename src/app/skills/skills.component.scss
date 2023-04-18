@@ -8,6 +8,7 @@ $mobile-breakpoint-4: 1400px;
     flex-direction: column;
     gap: 20px;
     z-index: 7;
+    overflow: hidden;
     .skillContent {
         display: flex;
         flex-direction: column;

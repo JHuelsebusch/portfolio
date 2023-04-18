@@ -35,7 +35,7 @@ $mobile-breakpoint-4: 1400px;
                 box-sizing: border-box;
                 color: var(--white);
                 padding: 15px 25px;
-                background: unset;
+                background: var(--darkblue);
                 border: 1px solid var(--blue);
                 border-radius: 10px;
                 &::placeholder {

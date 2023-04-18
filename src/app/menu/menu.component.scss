@@ -119,6 +119,8 @@ header {
             flex-direction: column !important;
             justify-content: center;
             align-items: center;
+            font-size: var(--headline-size);
+            background-color: var(--darkblue);
             gap: 50px !important;
             z-index: 0;
         }

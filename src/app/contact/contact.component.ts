@@ -14,4 +14,12 @@ export class ContactComponent {
     message: new FormControl('',[Validators.required],[])
   })
 
+  isSubmitted = false;
+  onSubmit() {
+    this.isSubmitted = true;
+    if (this.contactForm.valid){
+      this.isSubmitted = false;
+      this.contactForm.reset();
+    }
+  }
 }

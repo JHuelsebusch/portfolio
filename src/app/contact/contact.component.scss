@@ -23,6 +23,16 @@ $mobile-breakpoint-4: 1400px;
         width: 100%;
         margin-top: 30px;
         gap: 30px;
+        &.ng-submitted {
+            &.ng-invalid {
+                div {
+                    input,
+                    textarea {
+                        border: 1px solid red;
+                    }
+                }
+            }
+        }
         div {
             position: relative;
             width: 100%;
@@ -48,9 +58,6 @@ $mobile-breakpoint-4: 1400px;
                 }
                 &.ng-touched,
                 &.ng-dirty {
-                    &.ng-invalid {
-                        border: 1px solid red;
-                    }
                     &.ng-valid {
                         border: 1px solid var(--lightblue);
                     }

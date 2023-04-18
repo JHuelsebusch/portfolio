@@ -9,11 +9,11 @@
         <p>Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your projects with my work. <br>
             <br> Need a frontend developer? <b>Contact me!</b></p>
     </div>
-    <form [formGroup]="contactForm">
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
         <div class="ipt">
             <input formControlName="name" type="text" placeholder="Your name" id="name">
             <ng-container *ngIf="contactForm.controls['name'] as name">
-                <ng-container *ngIf="name.dirty || name.touched ">
+                <ng-container *ngIf="name.invalid && isSubmitted">
                     <p class="error" *ngIf="name.errors?.['required']">Your name is required</p>
                 </ng-container>
             </ng-container>
@@ -21,7 +21,7 @@
         <div class="ipt">
             <input formControlName="email" type="text" placeholder="Your email" id="email">
             <ng-container *ngIf="contactForm.controls['email'] as email">
-                <ng-container *ngIf="email.dirty || email.touched ">
+                <ng-container *ngIf="email.invalid && isSubmitted">
                     <p class="error" *ngIf="email.errors?.['required'] || email.errors?.['email']">Your email is required</p>
                 </ng-container>
             </ng-container>
@@ -29,7 +29,7 @@
         <div class="ipt">
             <textarea formControlName="message" name="" id="" cols="30" rows="10" placeholder="Your message" id="message"></textarea>
             <ng-container *ngIf="contactForm.controls['message'] as message">
-                <ng-container *ngIf="message.dirty || message.touched ">
+                <ng-container *ngIf="message.invalid && isSubmitted">
                     <p class="error" *ngIf="message.errors?.['required']">Your message is empty</p>
                 </ng-container>
             </ng-container>

@@ -29,5 +29,9 @@ export class PortfolioComponent {
     github: 'https://github.com/JHuelsebusch/elves_of_fate',
     img: 'elves.png'
   }
-  ]
+  ];
+
+  openNewWindow(url: string){
+    window.open(url, '_blank');
+  }
 }

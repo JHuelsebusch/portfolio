@@ -1,0 +1,94 @@
+.startSec {
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  padding-top: 70px;
+  padding: var(--padding-page);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  gap: 50px;
+  z-index: 5;
+  overflow: hidden;
+}
+.startSec .row {
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.startSec .devSide {
+  transform: rotate(-90deg);
+  font-size: 65px;
+  font-weight: 300;
+  white-space: nowrap;
+  margin-right: -60px;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+.startSec .start {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+.startSec .start .dev {
+  flex-direction: column;
+}
+.startSec .start .dev p {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+.startSec .start .dev .name {
+  font-family: var(--font-black);
+  font-size: var(--headline-size);
+}
+.startSec .start .dev .profession {
+  font-size: var(--subheadline-size);
+  color: var(--blue);
+  text-transform: uppercase;
+}
+.startSec .startpageEnd {
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 25px;
+}
+.startSec .startpageEnd .line {
+  object-fit: contain;
+}
+.startSec .startpageEnd .startSocial {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+.startSec .startpageEnd .startSocial img {
+  transform: scale(0.8);
+  cursor: pointer;
+  transition: 225ms ease-in-out;
+}
+.startSec .startpageEnd .startSocial img:hover {
+  transform: scale(1.2);
+  transition: 225ms ease-in-out;
+}
+.startSec .startpageEnd .placeholder {
+  display: none;
+  width: 66px;
+}
+
+@media (max-width: 520px) {
+  .devSide {
+    display: none;
+  }
+  .startpageEnd {
+    justify-content: space-between !important;
+  }
+  .placeholder {
+    display: flex !important;
+  }
+}/*# sourceMappingURL=start.component.css.map */

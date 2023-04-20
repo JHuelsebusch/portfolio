@@ -1,0 +1,115 @@
+.skillSec {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 7;
+  overflow: hidden;
+}
+.skillSec .skillContent {
+  display: flex;
+  flex-direction: column;
+}
+.skillSec .skillContent .skills {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: var(--padding-page);
+}
+.skillSec .skillContent .skills .line {
+  position: absolute;
+  right: 0;
+}
+.skillSec .skillContent p {
+  padding: var(--padding-page);
+  z-index: 5;
+}
+.skillSec .skillContent .skillListMobile {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: var(--padding-page);
+  gap: 20px;
+  z-index: 5;
+}
+.skillSec .skillContent .skillListMobile .skillIcons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.skillSec .skillContent .skillListMobile .skillIcons img {
+  height: 50px;
+  object-fit: contain;
+}
+.skillSec .skillContent .skillListMobile .skillIcons img:hover {
+  transform: scale(1.2);
+}
+.skillSec .skillContent .skillbtn {
+  align-self: center;
+  margin: 20px 0px;
+  z-index: 5;
+}
+.skillSec .skillListDesktop {
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: var(--padding-page);
+  gap: 50px;
+  z-index: 5;
+}
+.skillSec .skillListDesktop .skillIcons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.skillSec .skillListDesktop .skillIcons img {
+  height: 50px;
+  object-fit: contain;
+}
+.skillSec .skillListDesktop .skillIcons img:hover {
+  transform: scale(1.2);
+}
+
+@media (min-width: 1100px) {
+  .skillSec {
+    flex-direction: row-reverse;
+    justify-content: space-between !important;
+    align-items: center;
+    min-height: 50vh;
+    gap: 50px;
+  }
+  .skillSec .skillContent {
+    padding: var(--padding-page);
+    padding-left: unset !important;
+    width: 30%;
+  }
+  .skillSec .skillContent .skills {
+    padding: unset;
+  }
+  .skillSec .skillContent p {
+    padding: unset;
+  }
+  .skillSec .skillContent .skillbtn {
+    align-self: flex-start;
+  }
+  .skillSec .skillListMobile {
+    display: none !important;
+  }
+  .skillSec .skillListDesktop {
+    display: flex !important;
+    padding-right: unset !important;
+    max-width: 540px;
+  }
+}
+@media (min-width: 1400px) {
+  .skillListDesktop {
+    padding: 90px !important;
+    display: flex !important;
+    padding-right: unset !important;
+    max-width: 585px !important;
+    gap: 90px !important;
+  }
+}/*# sourceMappingURL=skills.component.css.map */

@@ -67,6 +67,10 @@ $mobile-breakpoint-4: 1400px;
     background: linear-gradient(var(--darkblue), var(--blue));
 }
 
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(var(--green), var(--lightblue));
+}
+
 html {
     scroll-behavior: smooth;
 }

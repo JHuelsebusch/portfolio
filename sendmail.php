@@ -21,7 +21,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
     
             $recipient = 'mail@janis-huelsebusch.de';  
             $subject = "Contact From $email";
-            $headers = "<From:  $email>";
+            $headers = "From:  <$email>";
             $message = "From:" . $name . "/n" . $message;
     
             mail($recipient, $subject, $message, $headers);

@@ -9,7 +9,7 @@
         <p>Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your projects with my work. <br>
             <br> Need a frontend developer? <b>Contact me!</b></p>
     </div>
-    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" data-aos="zoom-in" data-aos-duration="1000">
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit(formContact)" #formContact="ngForm" data-aos="zoom-in" data-aos-duration="1000">
         <div class="ipt">
             <input formControlName="name" type="text" placeholder="Your name" id="name">
             <ng-container *ngIf="contactForm.controls['name'] as name">

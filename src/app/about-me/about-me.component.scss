@@ -29,9 +29,20 @@ $mobile-breakpoint-4: 1400px;
             max-width: 500px;
             bottom: 0px;
         }
-        .pic {
-            object-fit: contain;
-            width: 300px;
+        .profilePic {
+            position: relative;
+            .pic {
+                object-fit: contain;
+                width: 300px;
+            }
+            .picOverlay {
+                position: absolute;
+                top: 0;
+                right: 0;
+                object-fit: contain;
+                width: 300px;
+                z-index: 7;
+            }
         }
     }
     .content {
@@ -72,12 +83,15 @@ $mobile-breakpoint-4: 1400px;
             align-items: flex-end;
             padding-left: unset;
             position: unset;
-            .pic {
-                width: 380px;
-            }
             .wave {
                 bottom: -215px;
                 height: 300px;
+            }
+            .pic {
+                width: 380px;
+            }
+            .picOverlay {
+                width: 380px;
             }
         }
         .content {
@@ -91,6 +105,9 @@ $mobile-breakpoint-4: 1400px;
 @media (min-width: $mobile-breakpoint-4) {
     .aboutMeSec {
         .pic {
+            width: 440px !important;
+        }
+        .picOverlay {
             width: 440px !important;
         }
     }

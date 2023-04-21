@@ -10,36 +10,40 @@
             <br> Need a frontend developer? <b>Contact me!</b></p>
     </div>
     <form [formGroup]="contactForm" (ngSubmit)="onSubmit(formContact)" #formContact="ngForm" data-aos="zoom-in" data-aos-duration="1000">
-        <div class="ipt">
-            <input formControlName="name" type="text" placeholder="Your name" id="name">
-            <ng-container *ngIf="contactForm.controls['name'] as name">
-                <ng-container *ngIf="name.invalid && isSubmitted">
-                    <p class="error" *ngIf="name.errors?.['required']">Your name is required</p>
-                </ng-container>
-            </ng-container>
-        </div>
-        <div class="ipt">
-            <input formControlName="email" type="text" placeholder="Your email" id="email">
-            <ng-container *ngIf="contactForm.controls['email'] as email">
-                <ng-container *ngIf="email.invalid && isSubmitted">
-                    <p class="error" *ngIf="email.errors?.['required'] || email.errors?.['email']">Your email is required</p>
-                </ng-container>
-            </ng-container>
-        </div>
-        <div class="ipt">
-            <textarea formControlName="message" name="" id="" cols="30" rows="10" placeholder="Your message" id="message"></textarea>
-            <ng-container *ngIf="contactForm.controls['message'] as message">
-                <ng-container *ngIf="message.invalid && isSubmitted">
-                    <p class="error" *ngIf="message.errors?.['required']">Your message is empty</p>
-                </ng-container>
-            </ng-container>
-        </div>
+        <div class="overlayAchor">
 
-        <button [disabled]="emailSent" class="btn" type="submit">Send message</button>
-        <div class="overlay" *ngIf="emailSent">
-            <p data-aos="fade-left" data-aos-duration="1000">Email was sent successfully!</p>
-            <p data-aos="fade-left" data-aos-duration="1000">I will send you an answer as soon as possible.</p>
+
+            <div class="ipt">
+                <input formControlName="name" type="text" placeholder="Your name" id="name">
+                <ng-container *ngIf="contactForm.controls['name'] as name">
+                    <ng-container *ngIf="name.invalid && isSubmitted">
+                        <p class="error" *ngIf="name.errors?.['required']">Your name is required</p>
+                    </ng-container>
+                </ng-container>
+            </div>
+            <div class="ipt">
+                <input formControlName="email" type="text" placeholder="Your email" id="email">
+                <ng-container *ngIf="contactForm.controls['email'] as email">
+                    <ng-container *ngIf="email.invalid && isSubmitted">
+                        <p class="error" *ngIf="email.errors?.['required'] || email.errors?.['email']">Your email is required</p>
+                    </ng-container>
+                </ng-container>
+            </div>
+            <div class="ipt">
+                <textarea formControlName="message" name="" id="" cols="30" rows="10" placeholder="Your message" id="message"></textarea>
+                <ng-container *ngIf="contactForm.controls['message'] as message">
+                    <ng-container *ngIf="message.invalid && isSubmitted">
+                        <p class="error" *ngIf="message.errors?.['required']">Your message is empty</p>
+                    </ng-container>
+                </ng-container>
+            </div>
+            <div class="overlay" *ngIf="emailSent">
+                <p data-aos="fade-left" data-aos-duration="1000">Email was sent successfully!</p>
+                <p data-aos="fade-left" data-aos-duration="1000">I will send you an answer as soon as possible.</p>
+            </div>
         </div>
+        <button [disabled]="emailSent" class="btn" type="submit">Send message</button>
+
 
     </form>
 </div>

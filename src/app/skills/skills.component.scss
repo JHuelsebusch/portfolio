@@ -119,3 +119,9 @@ $mobile-breakpoint-4: 1400px;
         gap: 90px !important;
     }
 }
+
+@media(max-width: 420px) {
+    .line {
+        right: -90px !important;
+    }
+}

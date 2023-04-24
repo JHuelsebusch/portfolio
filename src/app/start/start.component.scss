@@ -60,7 +60,7 @@ $mobile-breakpoint-4: 1400px;
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
-        gap: 25px;
+        gap: 16px;
         .line {
             object-fit: contain;
         }
@@ -94,5 +94,11 @@ $mobile-breakpoint-4: 1400px;
     }
     .placeholder {
         display: flex !important;
+    }
+}
+
+@media (min-width: $mobile-breakpoint-4) {
+    .startpageEnd {
+        gap: 116px !important;
     }
 }

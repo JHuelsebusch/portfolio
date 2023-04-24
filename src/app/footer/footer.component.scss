@@ -109,3 +109,9 @@ footer {
         display: flex !important;
     }
 }
+
+@media (min-width: $mobile-breakpoint-4) {
+    .copyright {
+        right: 200px !important;
+    }
+}

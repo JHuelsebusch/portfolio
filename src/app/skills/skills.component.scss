@@ -112,9 +112,10 @@ $mobile-breakpoint-4: 1400px;
 
 @media (min-width: $mobile-breakpoint-4) {
     .skillListDesktop {
-        padding: 90px !important;
+        padding-top: 90px !important;
+        padding-bottom: 90px !important;
         display: flex !important;
-        padding-right: unset !important;
+        // padding-right: unset !important;
         max-width: 585px !important;
         gap: 90px !important;
     }
